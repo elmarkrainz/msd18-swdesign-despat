@@ -1,0 +1,33 @@
+@startuml
+
+
+
+skinparam classAttributeIconSize 0
+title Observer Pattern
+
+
+interface Subject <<interface>>
+interface Observer <<interface>>
+class ConcreteSubject
+class ConcreteObserver
+
+Subject : attach(Observer)
+Subject : remove(Observer)
+Subject : notifyObservers()
+
+Observer : update()
+ConcreteObserver : update()
+ConcreteObserver : // otherObserverMethods()
+
+ConcreteSubject : - observers : List< Observer>
+ConcreteSubject : attach(Observer)
+ConcreteSubject : remove(Observer)
+ConcreteSubject : notifyObservers() {...}
+
+Subject "1" -right-> "*" Observer : "observers"
+
+ConcreteSubject <-left- ConcreteObserver : "subject"
+Subject <|-- ConcreteSubject
+Observer <|-- ConcreteObserver
+
+@enduml
