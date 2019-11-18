@@ -2,9 +2,17 @@ package at.fhj.msd.swdesign.factorymethod;
 
 public class ProductFactory {
 
-    public static Product createProduct() {
+    public static Product createProduct(int type) {
 
-        return new ConcreteProduct();
+        switch (type) {
+            case 1:
+                return new AnotherProduct();
+
+            default:
+                return new ConcreteProduct();
+
+        }
+
 
     }
 }

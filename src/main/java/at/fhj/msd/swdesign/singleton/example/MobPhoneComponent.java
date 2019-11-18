@@ -8,10 +8,10 @@ public class MobPhoneComponent {
     public MobPhoneComponent(String name) {
         this.name = name;
 
-        battery = new DeviceBattery();
+        //battery = new DeviceBattery();
 
-        // Refactor to Singleton
-        //   battery = DeviceBattery.getInstance();
+        //-- Refactor to Singleton
+        battery = DeviceBattery.getInstance();
     }
 
     public void use() {

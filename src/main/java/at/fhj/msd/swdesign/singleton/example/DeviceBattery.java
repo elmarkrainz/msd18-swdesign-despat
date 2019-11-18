@@ -12,14 +12,16 @@ public class DeviceBattery {
     }
 
 
+
 //--- refactor to singleton
-/*
+
 
     private static DeviceBattery deviceBattery;
 
-    private DeviceBattery() {
+   private DeviceBattery() {
         powerPercentage = 100;
     }
+
 
     public static DeviceBattery getInstance() {
         if (deviceBattery== null){
@@ -27,6 +29,6 @@ public class DeviceBattery {
         }
         return deviceBattery;
     }
-*/
+
 
 }

@@ -5,24 +5,18 @@ import java.util.Scanner;
 public class PositionApp {
 
     private Scanner scanner = new Scanner(System.in);
-
-    // field locationProvider =???
+    private AbstractLocationProvider locationProvider;
 
 
     public void selectProvider() {
 
         System.out.println("select location provider (g/n)");
-
         String in = scanner.nextLine();
         if (in.equalsIgnoreCase("g")) {
-
-            //  locationProvider =???
-
+            locationProvider = LocationProviderFactory.createLocationProvider(LocationProviderFactory.GPS_PROVIDER);
         } else {
             if (in.equalsIgnoreCase("n")) {
-
-                //locationProvider =???
-
+                locationProvider = LocationProviderFactory.createLocationProvider(LocationProviderFactory.NETWORK_PROVIDER);
             } else {
                 selectProvider();
             }

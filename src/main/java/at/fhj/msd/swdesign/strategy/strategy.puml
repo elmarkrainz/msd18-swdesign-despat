@@ -5,19 +5,27 @@ title Strategy Pattern
 
 class Context{
 
-- ^ : Strategy
+- operation : Strategy
+
+  operate()
+
 
 }
+
+
+
+
+
+
 
 interface  Strategy <<interface>>{
 + algorithmus()
 }
 
-
 Context ->  Strategy
 
- Strategy <|.. CongreteStrategyA
- Strategy <|.. CongreteStrategyB
+Strategy <|.. CongreteStrategyA
+Strategy <|.. CongreteStrategyB
 
 
 @enduml
