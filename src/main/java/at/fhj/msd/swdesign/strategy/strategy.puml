@@ -1,0 +1,23 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+title Strategy Pattern
+
+class Context{
+
+- ^ : Strategy
+
+}
+
+interface  Strategy <<interface>>{
++ algorithmus()
+}
+
+
+Context ->  Strategy
+
+ Strategy <|.. CongreteStrategyA
+ Strategy <|.. CongreteStrategyB
+
+
+@enduml
