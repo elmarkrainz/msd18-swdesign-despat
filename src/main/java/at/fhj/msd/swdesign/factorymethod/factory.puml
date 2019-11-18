@@ -1,0 +1,17 @@
+@startuml
+skinparam classAttributeIconSize 0
+title Factory Method Pattern
+
+class Product
+class Creator
+class ConcreteProduct
+class ConcreteCreator
+
+Creator : + factoryMethod(): Product
+ConcreteCreator : factoryMethod(): Product
+
+Creator <|-- ConcreteCreator
+Product <|-- ConcreteProduct
+ConcreteProduct <. ConcreteCreator
+
+@enduml

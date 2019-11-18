@@ -1,0 +1,15 @@
+@startuml
+skinparam classAttributeIconSize 0
+title Factory Method Pattern
+
+class Product
+
+class ConcreteProduct
+class ProductFactory
+
+ProductFactory : createProduct(): Product
+
+Product <|-- ConcreteProduct
+ConcreteProduct <. ProductFactory
+
+@enduml
