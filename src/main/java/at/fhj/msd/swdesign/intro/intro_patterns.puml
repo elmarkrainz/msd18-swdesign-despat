@@ -1,0 +1,29 @@
+@startuml
+skinparam classAttributeIconSize 0
+title Intro to Design Patterns
+
+class Downloader
+class TextNotification
+
+class DownloadApp
+
+Downloader <-- DownloadApp
+TextNotification <--  DownloadApp
+
+/' ---
+Downloader - TextNotification : "?????"
+'/
+
+
+
+/' simple observer pattern '/
+
+interface Notification
+Downloader -> Notification
+
+Notification <|.. TextNotification
+
+
+
+
+@enduml

@@ -1,8 +1,11 @@
 package at.fhj.msd.swdesign.intro;
 
-public class TextNotification {
+public class TextNotification implements  Notification{
 
-    void sendNotification(String msg){
-        System.out.println("NOTIFICATION - " + msg);
+
+    @Override
+    public void sendNotification(String msg) {
+            System.out.println("NOTIFICATION - " + msg);
+
     }
 }

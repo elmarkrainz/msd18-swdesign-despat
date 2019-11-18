@@ -2,6 +2,17 @@ package at.fhj.msd.swdesign.intro;
 
 public class Downloader {
 
+
+    private Notification notification;
+
+    public void setNotification(Notification notification) {
+        this.notification = notification;
+    }
+
+
+
+
+
     public void download(final int millis) {
 
         Thread thread = new Thread(new Runnable() {
@@ -14,6 +25,8 @@ public class Downloader {
                     e.printStackTrace();
                 }
                 System.out.println("download finished");
+
+                notification.sendNotification(" Fertig!!");
 
             }
         });

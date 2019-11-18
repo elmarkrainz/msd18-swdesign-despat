@@ -6,9 +6,14 @@ public class DownloadApp {
         Downloader downloader = new Downloader();
         TextNotification textNotification = new TextNotification();
 
+
+        downloader.setNotification(textNotification);
+
+
         downloader.download(2000);
 
-        textNotification.sendNotification("fertig?");
+
+        //textNotification.sendNotification("fertig?");
 
     }
 
