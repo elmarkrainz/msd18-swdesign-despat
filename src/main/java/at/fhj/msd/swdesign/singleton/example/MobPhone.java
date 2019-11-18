@@ -16,5 +16,7 @@ public class MobPhone {
         display.use();
         display.use();
 
+
     }
+
 }
