@@ -1,0 +1,15 @@
+@startuml
+title Singleton Pattern
+
+skinparam classAttributeIconSize 0
+
+class Singleton{
+ + {static} uniqueInstance : Singleton
+ - Singleton()
+ + {static} getInstance() : Singleton
+
+}
+
+Singleton --> Singleton
+Client -> Singleton
+@enduml
