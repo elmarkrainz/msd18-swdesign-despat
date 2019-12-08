@@ -1,0 +1,38 @@
+@startuml
+
+
+
+skinparam classAttributeIconSize 0
+title Decorator Pattern
+
+
+abstract class Component
+class ConcreteComponent
+abstract class Decorator
+class ConcreteDecorator
+
+
+Component : + operation()
+
+
+Component <|- ConcreteComponent
+Client -> Component
+
+Decorator : - innerComponent : Component
+Decorator : + Decorator(Component)
+Decorator : + operation()
+
+note right: operation(){ innerComponent.operation();}
+
+
+ConcreteDecorator : + operation()
+ConcreteComponent : + operation()
+
+Component <|-- Decorator
+
+Decorator <|-- ConcreteDecorator
+Component <--o Decorator
+
+
+
+@enduml
