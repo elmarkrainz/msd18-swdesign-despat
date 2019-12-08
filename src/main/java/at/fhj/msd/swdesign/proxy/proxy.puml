@@ -1,0 +1,26 @@
+@startuml
+
+
+
+skinparam classAttributeIconSize 0
+title Proxy Pattern
+
+
+interface ServiceInterface <<interface>>
+class Proxy
+class Service
+
+ServiceInterface : operation()
+Proxy : operation()
+Service : operation()
+
+
+Proxy : - service : Service
+
+ServiceInterface <|.. Service
+ServiceInterface <|.. Proxy
+Proxy -> Service
+
+Client -> ServiceInterface
+
+@enduml
