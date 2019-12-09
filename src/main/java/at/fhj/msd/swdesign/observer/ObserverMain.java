@@ -6,7 +6,7 @@ public class ObserverMain {
 
 
 
-        MyObserverClass myObserverClass = new MyObserverClass();
+        SomeObserverClass myObserverClass = new SomeObserverClass();
         ConcreteObserver concreteObserver = new ConcreteObserver("Foo");
 
 
@@ -19,7 +19,7 @@ public class ObserverMain {
 
 
 
-        subject.foo();
+        subject.someOperation();
 
 
 
