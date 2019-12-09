@@ -1,0 +1,33 @@
+@startuml
+
+
+
+skinparam classAttributeIconSize 0
+title Observer Pattern Example
+
+
+
+interface ISensorSubject <<interface>>
+ISensorSubject : attach(listener: SensorListerner)
+ISensorSubject : remove(listener: SensorListerner)
+ISensorSubject : notifyObservers()
+
+interface SensorListener <<interface>>
+SensorListener : sensorDataChanged()
+
+SensorListener <|.. SensorLogger
+ISensorSubject <|.. SensorSubject
+
+
+class SensorSubject
+class SensorLogger
+class SensorApp
+
+SensorSubject <-- SensorApp
+
+
+SensorListener "*" <- ISensorSubject
+SensorLogger <-- SensorApp
+
+
+@enduml
