@@ -10,9 +10,6 @@ public class ProductFactory {
 
             default:
                 return new ConcreteProduct();
-
         }
-
-
     }
 }

@@ -8,10 +8,8 @@ public class FactoryMain {
 
         Product p ;
         p = ProductFactory.createProduct(1);
+
         p = ProductFactory.createProduct(0);
-
-
-
 
 
     }

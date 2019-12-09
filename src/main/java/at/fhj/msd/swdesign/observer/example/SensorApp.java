@@ -6,6 +6,10 @@ public class SensorApp {
 
         SensorSubject sensor = new SensorSubject();
 
+        SensorLogger logger = new SensorLogger();
+
+        sensor.attach(logger);
+
         sensor.collectSensorData();
     }
 }
