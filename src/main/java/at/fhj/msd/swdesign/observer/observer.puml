@@ -27,7 +27,7 @@ ConcreteSubject : notifyObservers() {...}
 Subject "1" -right-> "*" Observer : "observers"
 
 ConcreteSubject <-left- ConcreteObserver : "subject"
-Subject <|-- ConcreteSubject
-Observer <|-- ConcreteObserver
+Subject <|.. ConcreteSubject
+Observer <|.. ConcreteObserver
 
 @enduml

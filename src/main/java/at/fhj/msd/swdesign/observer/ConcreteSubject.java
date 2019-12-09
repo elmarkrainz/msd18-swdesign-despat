@@ -5,28 +5,41 @@ import java.util.List;
 
 public class ConcreteSubject implements Subject {
 
-    private List<Observer> observerList;
 
-    public ConcreteSubject (){
-        observerList = new ArrayList<Observer>();
+    private  List<Observer> observers;
+
+
+    public ConcreteSubject() {
+
+        observers = new ArrayList<>();
+
     }
 
-    @Override
+    public void someOperation() {
+
+        System.out.println(" something is going on, and then all observers are notified");
+
+        //       update all obbservers
+        notifyObservers();
+
+    }
+
+
+
     public void attach(Observer observer) {
-        observerList.add(observer);
+        observers.add(observer);
     }
 
-    @Override
     public void remove(Observer observer) {
-        observerList.remove(observer);
+        observers.remove(observer);
     }
 
-    @Override
     public void notifyObservers() {
 
-        for (Observer o: observerList) {
+        for (Observer o : observers) {
             o.update();
         }
+
 
     }
 }

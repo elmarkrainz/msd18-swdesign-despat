@@ -5,17 +5,23 @@ public class ObserverMain {
     public static void main(String[] args) {
 
 
-        Observer firstObserver = new ConcreteObserver("First");
-        Observer secondObserver = new ConcreteObserver("Second");
-        Observer thirdObserver = new ConcreteObserver("Third");
+
+        MyObserverClass myObserverClass = new MyObserverClass();
+        ConcreteObserver concreteObserver = new ConcreteObserver("Foo");
 
 
-        Subject subject = new ConcreteSubject();
+        ConcreteSubject subject = new ConcreteSubject();
 
-        subject.attach(firstObserver);
-        subject.attach(thirdObserver);
+        subject.attach(myObserverClass);
+        subject.attach(concreteObserver);
 
-        subject.notifyObservers();
+
+
+
+
+        subject.foo();
+
+
 
     }
 }
