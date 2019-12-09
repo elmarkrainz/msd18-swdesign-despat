@@ -10,6 +10,6 @@ public class ConcreteObserver implements Observer {
 
     @Override
     public void update() {
-        System.out.println("Observer: "+ observerName +" was notified");
+        System.out.println(".. Observer: "+ observerName +" was notified");
     }
 }

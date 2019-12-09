@@ -4,12 +4,11 @@ package at.fhj.msd.swdesign.observer.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SensorSubject implements ISensorSubject {
+public class SensorSubject {
 
-    private List<SensorListener> listeners;
 
     public SensorSubject() {
-        listeners = new ArrayList<>();
+
     }
 
 
@@ -29,7 +28,7 @@ public class SensorSubject implements ISensorSubject {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    notifyObservers();
+                    // nachricht an Observer
                 }
 
                 System.out.println(" -- stop sensor");
@@ -41,20 +40,4 @@ public class SensorSubject implements ISensorSubject {
     }
 
 
-    @Override
-    public void attach(SensorListener listener) {
-        listeners.add(listener);
-    }
-
-    @Override
-    public void remove(SensorListener listener) {
-        listeners.remove(listener);
-    }
-
-    @Override
-    public void notifyObservers() {
-        for (SensorListener l : listeners) {
-            l.sensorDataChanged();
-        }
-    }
 }

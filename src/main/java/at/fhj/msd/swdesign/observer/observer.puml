@@ -8,6 +8,8 @@ title Observer Pattern
 
 interface Subject <<interface>>
 interface Observer <<interface>>
+
+
 class ConcreteSubject
 class ConcreteObserver
 
@@ -26,7 +28,7 @@ ConcreteSubject : notifyObservers() {...}
 
 Subject "1" -right-> "*" Observer : "observers"
 
-ConcreteSubject <-left- ConcreteObserver : "subject"
+ConcreteSubject -> ConcreteObserver : "subject"
 Subject <|.. ConcreteSubject
 Observer <|.. ConcreteObserver
 
