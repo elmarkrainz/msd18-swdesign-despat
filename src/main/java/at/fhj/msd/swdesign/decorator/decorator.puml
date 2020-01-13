@@ -22,7 +22,6 @@ Decorator : - innerComponent : Component
 Decorator : + Decorator(Component)
 Decorator : + operation()
 
-note right: operation(){ innerComponent.operation();}
 
 
 ConcreteDecorator : + operation()
